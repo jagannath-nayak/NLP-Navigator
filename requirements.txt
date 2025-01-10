@@ -1,0 +1,10 @@
+streamlit
+transformers
+pandas
+keybert
+nltk
+sentence-transformers
+wordcloud
+matplotlib
+numpy
+pillow
