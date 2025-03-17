@@ -8,3 +8,10 @@ wordcloud
 matplotlib
 numpy
 pillow
+google-cloud-language 
+python-dotenv 
+google.generativeai
+streamlit-authenticator
+streamlit_lottie==0.0.5
+googlesearch-python==1.2.3
+setuptools
