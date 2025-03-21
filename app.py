@@ -20,11 +20,23 @@ def intro():
         left_col, right_col = st.columns(2)
         with left_col:
                 st.subheader("About NLP NAVIGATOR", divider='rainbow')
-                intro = '''🚀 Welcome to NLP Navigator!
-                An AI-powered text analysis toolkit for unlocking insights from language. 
-                Whether you're analyzing sentiments, summarizing documents, extracting key phrases, 
-                or comparing text similarity and Unlock insights from language with cutting-edge NLP models.
-                '''
+                intro = '''
+ 🧠 Introduction to NLP Navigator
+Welcome to NLP Navigator, an advanced AI-powered text analysis toolkit designed to unlock valuable insights from language. Whether you're a data analyst, researcher, business professional, or developer, NLP Navigator provides a user-friendly and powerful way to process and analyze textual data effortlessly.
+
+With cutting-edge Natural Language Processing (NLP) models, NLP Navigator allows users to:
+Analyze Sentiments & Emotions to understand public opinion.
+Extract Key Phrases & Summarize Text for quick insights.
+Compare Text Similarity for plagiarism detection and content matching.
+Visualize Sentiment Trends Over Time using heatmaps.
+Detect Spam in Emails & SMS with AI-powered spam classification.
+Perform Geospatial Sentiment Mapping to track sentiment trends across different locations.
+Generate Word Clouds for intuitive text visualization.
+
+By combining AI, automation, and NLP, NLP Navigator helps businesses, researchers, and individuals make data-driven decisions, optimize workflows, and extract meaningful insights from text. Whether you're analyzing customer feedback, social media trends, legal documents, or research papers, NLP Navigator makes text analysis efficient, insightful, and interactive.
+
+Start exploring NLP Navigator and harness the power of AI-driven text analytics today! 🚀'''
+                
                 st.markdown(intro)
 
         with right_col:
@@ -40,6 +52,10 @@ def intro():
                     "**Sentiment & Emotion Analysis:** Detect emotions and sentiments in text.",
                     "**Key Phrase Extraction & Summarization** Identify important phrases and generate concise summaries.",
                     "**Text Similarity & Comparison:** Compare different texts and measure their semantic similarity.",
+                    "**Word Cloud Generation:** Create visual representations of text data using word clouds.",
+                    "**Sentiment Heatmap:** Visualize sentiment scores across different text categories.",
+                    "**Geospatial Sentiment Analysis:** Analyze sentiment trends across different locations.",
+                    "**Social Media Sentiment Analysis:** Monitor sentiment on social media platforms.",
                     "**Feedback:** Feedback feature allows users to share their experience and suggestions for improvement."
                 ]
                 for feature in features:
@@ -51,7 +67,7 @@ def intro():
                 st_lottie.st_lottie(feature_animation, loop=True, width=500, height=400)
 
     with st.container(border=True):
-            st.subheader("Why SpamDefender.AI? 🚀", divider='rainbow')
+            st.subheader("Why NLP NAVIGATOR ? 🚀", divider='rainbow')
             left_col, right_col = st.columns(2)
             with left_col:
                 benefits = [
@@ -60,6 +76,8 @@ def intro():
                     "Feedback Loop - Allows users to provide feedback on the accuracy of nlp navigator system.",
                     "Data-Driven Insights 📊- Analyze trends in sentiment over time for better decision-making. Identify patterns in text to optimize content strategies.",
                     "Smart NLP Processing 🔍 - Clean and preprocess text by removing stop words & applying stemming. Use AI-powered models for key phrase extraction and summarization."
+                    "NLP Navigator is a powerful AI toolkit that helps businesses, researchers, and individuals analyze, interpret, and make data-driven decisions from textual data. "
+                    "It transforms raw text into actionable insights, solving real-world challenges efficiently."
                 ]
                 for benefit in benefits:
                     st.markdown(f"🔹 {benefit}")
@@ -67,6 +85,32 @@ def intro():
             with right_col:
                 benefits_animation = load_lottie_file("animations/success.json")
                 st_lottie.st_lottie(benefits_animation, loop=True, width=500, height=300)
+
+    with st.container(border=True):
+        st.subheader("🌍 Real-World Impact Summary", divider='rainbow')
+
+        # Left column for text, Right column for animation
+        left_col, right_col = st.columns(2)
+
+    with left_col:
+         st.markdown("""
+    | 🌍 **Problem** | 🚀 **How NLP Navigator Solves It?** |
+    |--------------|--------------------------------|
+    | **Detecting emotions in text** | AI-powered Emotion Detection & Keyphrase Extraction |
+    | **Comparing sentiment between texts** | Sentiment Analysis with Comparison & Trends |
+    | **Extracting meaningful insights from text** | Advanced Text Analysis & Summarization |
+    | **Visualizing important words** | Word Cloud Generation |
+    | **Understanding sentiment distribution** | Sentiment Heatmap & Trends |
+    | **Tracking sentiment across locations** | Geospatial Sentiment Mapping |
+    | **Monitoring public opinion on trending topics** | Social Media Sentiment Tracking & Forecasting |
+    | **Preventing spam & phishing attacks** | AI-powered Spam & Email Classification |
+    | **Improving AI recommendations based on feedback** | Interactive User Feedback System |
+    """, unsafe_allow_html=True)
+
+    with right_col:
+            impact_animation = load_lottie_file("animations/impact.json")  
+            st_lottie.st_lottie(impact_animation, loop=True, width=500, height=350)
+
 
     with st.container(border=True):
             st.subheader("FAQs❓", divider='rainbow')
@@ -82,6 +126,9 @@ def intro():
             # FAQ 4
             with st.expander("Do I need coding knowledge to use NLP Navigator?"):
                 st.write("No! NLP Navigator has a simple and user-friendly Streamlit interface, making it accessible to everyone, even without coding skills.")
+            # FAQ 5
+            with st.expander("🌍 How NLP Navigator Solves Real-World Problems?"):
+                 st.write("NLP Navigator isn't just a tool—it’s a real-world problem solver that applies AI-driven NLP to analyze text, extract insights, and improve decision-making across various industries.") 
 
 # Run authentication system
 authentication()
@@ -93,6 +140,9 @@ if st.session_state["authentication_status"]:
     st.Page(title="Sentiment Analysis",page="features/2-Sentiment-Analysis.py", icon="📝"),
     st.Page(title="Text Analysis",page="features/3-Text-Analysis-Tools.py", icon = "🛠"),
     st.Page(title="Word Cloud",page="features/4-Word-Cloud.py", icon="☁️"),
-    st.Page(title="Feedback",page="features/5-Feedback.py", icon="💬")
+    st.Page(title="Sentiment Heatmap", page="features/5-Sentiment-Heatmap.py", icon="📊"),
+    st.Page(title="Geospatial Sentiment", page="features/6-Geospatial-Sentiment.py", icon="🌍"),
+    st.Page(title="Social Media Sentiment",page="features/7-Social-Media-Sentiment.py", icon="📱"),
+    st.Page(title="Feedback",page="features/8-Feedback.py", icon="💬")
       ])
     pg.run()

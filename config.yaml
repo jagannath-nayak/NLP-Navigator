@@ -1,2 +1,6 @@
 credentials:
   usernames:
+    jagga:
+      email: jagga@gmail.com
+      name: jagannath
+      password: $2b$12$vwS9QB54vKyb4298lv9uW.U1zjKvckcpOdV326inaVBQxoVNdx/0u
